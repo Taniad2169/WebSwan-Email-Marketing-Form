@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSwan Digital Marketing Solutions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #4a6580);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .header h1 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .header p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .privacy-policy {
+            font-size: 14px;
+            margin-top: 30px;
+            color: #ffe4b5;
+            background: rgba(44,62,80,0.1);
+            border-radius: 8px;
+            padding: 14px;
+            text-align: left;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .privacy-policy a {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+        .footer {
+            background: linear-gradient(135deg, #4a6580, #2c3e50);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #4a6580;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(74, 101, 128, 0.2);
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        button {
+            background: linear-gradient(135deg, #2c3e50, #4a6580);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #4a6580, #2c3e50);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .form-section-title {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a6580;
+        }
+        .word-count {
+            font-size: 14px;
+            color: #666;
+            text-align: right;
+            margin-top: 5px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        /* Animated Laptop styles */
+        .laptop-container {
+            width: 120px;
+            height: 100px;
+            margin: 0 auto 18px auto;
+            display: block;
+        }
+        .laptop-base {
+            animation: laptopBounce 2s infinite ease-in-out;
+            transform-origin: 50% 90%;
+        }
+        .laptop-screen {
+            animation: screenGlow 2s infinite linear;
+        }
+        @keyframes laptopBounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-8px);}
+        }
+        @keyframes screenGlow {
+            0%, 100% { fill: #e3f2fd; }
+            50% { fill: #bbdefb; }
+        }
+        /* Custom web design page animation */
+        .webpage-group {
+            animation: webpagePop 2s infinite;
+            transform-origin: 50% 80%;
+        }
+        @keyframes webpagePop {
+            0%, 100% { opacity: 1; transform: scale(1);}
+            50% { opacity: 0.85; transform: scale(1.08);}
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .header p {
+                font-size: 16px;
+            }
+            .privacy-policy {
+                font-size: 12px;
+                padding: 8px;
+            }
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .laptop-container {
+                width: 80px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Free Custom Website Demo—Here’s What I Can Do for You:</h1>
+            <p>
+                • Show you a custom website demo, so you can see how professional your online presence could be.<br><br>
+                • Do a free analysis of your current website to identify why it may not be getting you business.<br><br>
+                • Create a custom calendar and task management system for your appointments, so staying organized is easy and stress-free.<br><br>
+                <br>
+                No pressure, no obligation—if you like what you see, we can talk about working together. If not, you won’t pay a thing.<br><br>
+                💫 Fill out the form and get started: <br><br>
+                Let’s make your business shine online—because a professional website isn’t just a page, it’s your first impression, your credibility, and your opportunity to attract the right clients.
+            </p>
+            <div class="privacy-policy">
+                <strong>Privacy Policy Disclaimer:</strong> We are collecting your information solely for the purpose of designing a free website demo for you and to have the ability to contact you in regards to the demo. We won't sell or share your information to any third party. For more information regarding our privacy policy, please visit <a href="https://www.webeswandigitalsolutions.com/privacy-policy" target="_blank">https://www.webeswandigitalsolutions.com/privacy-policy</a>.
+            </div>
+        </div>
+
+        <form id="consultationForm">
+            <div class="form-section">
+                <h2 class="form-section-title">Your Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name <span class="required">*</span></label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Business Details</h2>
+                <div class="form-group">
+                    <label for="timeInBusiness">How long have you been in business? <span class="required">*</span></label>
+                    <select id="timeInBusiness" name="timeInBusiness" required>
+                        <option value="">Please select...</option>
+                        <option value="startup">Startup (0-6 months)</option>
+                        <option value="6-12 months">6-12 months</option>
+                        <option value="1-2 years">1-2 years</option>
+                        <option value="2-5 years">2-5 years</option>
+                        <option value="5-10 years">5-10 years</option>
+                        <option value="10+ years">10+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="businessType">What type of business? <span class="required">*</span></label>
+                    <select id="businessType" name="businessType" required>
+                        <option value="">Please select...</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="lawyer">Lawyer</option>
+                        <option value="cosmetic surgeon">Cosmetic Surgeon</option>
+                        <option value="chiropractor">Chiropractor</option>
+                        <option value="real estate">Real Estate/Agent/Broker</option>
+                        <option value="mortgage broker">Mortgage Broker</option>
+                        <option value="restaurant owner">Restaurant Owner</option>
+                        <option value="accountant">Accountant/Tax Preparer</option>
+                        <option value="entrepreneur">Entrepreneur</option>
+                        <option value="high-tech">High-Tech</option>
+                        <option value="beautician">Beautician</option>
+                        <option value="hair dresser">Hair Dresser/Barber</option>
+                        <option value="spa">Spa</option>
+                        <option value="massage therapist">Massage Therapist</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group" id="otherBusinessTypeGroup" style="display: none;">
+                    <label for="otherBusinessType">Please specify your business type (max 20 words)</label>
+                    <textarea id="otherBusinessType" name="otherBusinessType" maxlength="300"></textarea>
+                    <div class="word-count">Word count: <span id="businessWordCount">0</span>/20</div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Services & Preferences</h2>
+                <div class="form-group">
+                    <label for="serviceInterest">What service are you interested in? <span class="required">*</span></label>
+                    <select id="serviceInterest" name="serviceInterest" required>
+                        <option value="">Please select...</option>
+                        <option value="free demo">Free Demo</option>
+                        <option value="reputation manager">Reputation Manager</option>
+                        <option value="landing page">Landing Page for Lead Generation</option>
+                        <option value="website analyst">Free Website Analyst</option>
+                        <option value="ad campaign">Ad Campaign Marketing</option>
+                        <option value="video script">Video/Script</option>
+                        <option value="calendar">Calendar</option>
+                        <option value="calendar with tasks">Calendar with Task Management</option>
+                        <option value="lead capture form">Lead Capture Form</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group" id="otherServiceGroup" style="display: none;">
+                    <label for="otherService">Please specify the service (max 20 words)</label>
+                    <textarea id="otherService" name="otherService" maxlength="300"></textarea>
+                    <div class="word-count">Word count: <span id="serviceWordCount">0</span>/20</div>
+                </div>
+                <div class="form-group">
+                    <label for="bestTime">Best Time to Call <span class="required">*</span></label>
+                    <select id="bestTime" name="bestTime" required>
+                        <option value="">Please select...</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMethod">Best Way to Contact You <span class="required">*</span></label>
+                    <select id="contactMethod" name="contactMethod" required>
+                        <option value="">Please select...</option>
+                        <option value="call">Call</option>
+                        <option value="text">Text</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="timeZone">Time Zone <span class="required">*</span></label>
+                    <select id="timeZone" name="timeZone" required>
+                        <option value="">Please select...</option>
+                        <option value="pacific">Pacific</option>
+                        <option value="eastern">Eastern Standard</option>
+                        <option value="central">Central</option>
+                        <option value="mountain">Mountain</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Will you be available for 15 minutes for the demo presentation? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="availableYes" name="available" value="yes" required>
+                            <label for="availableYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="availableNo" name="available" value="no">
+                            <label for="availableNo">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Will you have a laptop or a desktop available for the presentation? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="laptopYes" name="laptop" value="yes" required>
+                            <label for="laptopYes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="laptopNo" name="laptop" value="no">
+                            <label for="laptopNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit Form</button>
+        </form>
+        <div class="footer">
+            <svg class="laptop-container" viewBox="0 0 120 100">
+                <!-- Laptop base -->
+                <g class="laptop-base">
+                    <rect x="20" y="60" width="80" height="18" rx="5" fill="#b0bec5" stroke="#78909C" stroke-width="2"/>
+                    <rect x="28" y="63" width="64" height="7" rx="3.5" fill="#90a4ae"/>
+                </g>
+                <!-- Laptop screen -->
+                <g class="laptop-screen">
+                    <rect x="28" y="20" width="64" height="40" rx="5" stroke="#78909C" stroke-width="2"/>
+                    <!-- Custom Web Design Page (inside screen) -->
+                    <g class="webpage-group">
+                        <!-- Header Bar -->
+                        <rect x="32" y="24" width="56" height="8" rx="3" fill="#1976d2"/>
+                        <text x="60" y="30" font-size="7" fill="#fff" font-family="Segoe UI, Arial" text-anchor="middle">Custom Web Design</text>
+                        <!-- Hero Section -->
+                        <rect x="32" y="34" width="56" height="12" rx="2" fill="#fafafa" stroke="#e0e0e0" stroke-width="1"/>
+                        <circle cx="40" cy="40" r="5" fill="#ff7043"/>
+                        <rect x="48" y="37" width="27" height="6" rx="3" fill="#90caf9"/>
+                        <text x="62" y="44" font-size="5" fill="#1976d2" font-family="Segoe UI, Arial" text-anchor="middle">Beautiful. Modern. Yours.</text>
+                        <!-- Gallery Thumbnails -->
+                        <rect x="32" y="48" width="12" height="6" rx="2" fill="#ffd54f"/>
+                        <rect x="46" y="48" width="12" height="6" rx="2" fill="#81c784"/>
+                        <rect x="60" y="48" width="12" height="6" rx="2" fill="#ba68c8"/>
+                        <rect x="74" y="48" width="14" height="6" rx="2" fill="#fff176"/>
+                        <!-- Footer Bar -->
+                        <rect x="32" y="54" width="56" height="2" rx="1" fill="#1976d2"/>
+                    </g>
+                </g>
+            </svg>
+            <h3>Thank you for taking time to fill out the form!</h3>
+            <p>We will contact you shortly to schedule your free demo and website analysis.</p>
+        </div>
+    </div>
+    <script>
+        // Show/hide other business type field
+        document.getElementById('businessType').addEventListener('change', function() {
+            const otherGroup = document.getElementById('otherBusinessTypeGroup');
+            otherGroup.style.display = this.value === 'other' ? 'block' : 'none';
+        });
+        // Show/hide other service field
+        document.getElementById('serviceInterest').addEventListener('change', function() {
+            const otherGroup = document.getElementById('otherServiceGroup');
+            otherGroup.style.display = this.value === 'other' ? 'block' : 'none';
+        });
+        // Word count for other business type
+        document.getElementById('otherBusinessType').addEventListener('input', function() {
+            const wordCount = this.value.trim() === '' ? 0 : this.value.trim().split(/\s+/).length;
+            document.getElementById('businessWordCount').textContent = wordCount;
+            if (wordCount > 20) {
+                this.value = this.value.split(/\s+/).slice(0, 20).join(' ');
+                document.getElementById('businessWordCount').textContent = 20;
+            }
+        });
+        // Word count for other service
+        document.getElementById('otherService').addEventListener('input', function() {
+            const wordCount = this.value.trim() === '' ? 0 : this.value.trim().split(/\s+/).length;
+            document.getElementById('serviceWordCount').textContent = wordCount;
+            if (wordCount > 20) {
+                this.value = this.value.split(/\s+/).slice(0, 20).join(' ');
+                document.getElementById('serviceWordCount').textContent = 20;
+            }
+        });
+        // Form validation
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // If everything is valid, you would typically submit the form to a server here
+            alert('Thank you for your submission! We will contact you soon to schedule your free demo.');
+            this.reset();
+            // Reset word counts and hide other fields
+            document.getElementById('businessWordCount').textContent = '0';
+            document.getElementById('serviceWordCount').textContent = '0';
+            document.getElementById('otherBusinessTypeGroup').style.display = 'none';
+            document.getElementById('otherServiceGroup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
