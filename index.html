@@ -60,6 +60,15 @@ button[type=submit]:disabled{opacity:.6;cursor:wait}
 .thanks{text-align:center}
 .thanks h2{border:0;text-align:center}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  /* Referral program button: text glides across horizontally (pauses on hover/focus) */
+  .refbtn { display:block; position:relative; overflow:hidden; white-space:nowrap; text-decoration:none; color:#fff; border-radius:14px; padding:13px 0; margin:14px 0; font-weight:800; font-size:1rem;
+    background:linear-gradient(90deg,#0b6b49,#11875d,#2baec2); box-shadow:0 8px 20px rgba(17,135,93,.3); }
+  .refbtn { max-width:100%; } .refbtn .track { display:inline-block; animation:refScroll 22s linear infinite; } .refbtn .track span { padding-right:60px; }
+  .refbtn:hover .track, .refbtn:focus-visible .track { animation-play-state:paused; }
+  .refbtn:focus-visible { outline:3px solid #f2b705; outline-offset:2px; }
+  .refbtn .track b { background:#fff; color:#0b6b49; border-radius:999px; padding:3px 12px; margin:0 10px; }
+  @keyframes refScroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .refbtn { white-space:normal; padding:13px 16px; text-align:center; } .refbtn .track { animation:none; } .refbtn .track span + span { display:none; } }
 footer{text-align:center;font-size:.82rem;color:var(--muted);margin:18px 0 6px}
 </style>
 </head>
@@ -75,6 +84,8 @@ footer{text-align:center;font-size:.82rem;color:var(--muted);margin:18px 0 6px}
     <p>💡 Curious what it will cost? Pick your services and see your estimate in a minute.</p>
     <a href="https://taniad2169.github.io/webswan-project-estimate/" target="_blank" rel="noopener">🧮 Estimate my cost</a>
   </div>
+
+  <a class="refbtn" href="https://taniad2169.github.io/The-WebSwan-Referral-Form/" target="_blank" rel="noopener" aria-label="Click here to earn on our referral program: get 10% for each referral on any web design, e-card, landing page or phone application, paid one time when your referral pays for the project"><span class="track" aria-hidden="true"><span><b>💰 Click here to earn on our referral program</b> Get 10% for each referral on any web design, e-card, landing page or phone application, paid one time when your referral's project is paid. 🦢</span><span><b>💰 Click here to earn on our referral program</b> Get 10% for each referral on any web design, e-card, landing page or phone application, paid one time when your referral's project is paid. 🦢</span></span></a>
 
   <form id="projectForm" novalidate>
     <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
